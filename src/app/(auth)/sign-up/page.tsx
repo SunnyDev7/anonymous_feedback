@@ -132,7 +132,7 @@ const page = () => {
                         : "text-red-500"
                     }`}
                   >
-                    test {usernameMessage}
+                    {usernameMessage}
                   </p>
                   <FormMessage />
                 </FormItem>
@@ -164,7 +164,11 @@ const page = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-black text-white"
+            >
               {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Please Wait
